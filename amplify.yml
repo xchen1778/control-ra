@@ -1,0 +1,15 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - rm -rf admin
+        - bundle install
+    build:
+      commands: [bundle exec jekyll build]
+  artifacts:
+    baseDirectory: _site
+    files:
+      - "**/*"
+  cache:
+    paths: []

@@ -1,0 +1,24 @@
+/******************************************************************************
+ * subpage.layout.scss
+ *
+ * Styles for the Subpage layout.
+ *****************************************************************************/
+/* ITN branding */
+/* System messages */
+@media (min-width: 44em) {
+  .l-region--sidebar-first {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+
+  .l-content {
+    width: 74.46809%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}

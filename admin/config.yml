@@ -1,0 +1,851 @@
+backend:
+  name: git-gateway
+  branch: cms-build # need to change this branch name to the name of the corresponding branch that's being published on Netlify in order for Netlify CMS to work properly
+publish_mode: editorial_workflow
+media_folder: "assets/img/"
+collections:
+  - name: "site_settings"
+    label: "Site Settings"
+    editor:
+      preview: false
+    files:
+      - label: "Theme"
+        name: "theme"
+        file: "_data/theme.yml"
+        fields:
+          - { label: "Link Color", name: "linkcolor", widget: "color" }
+          - {
+              label: "Visited Link Color",
+              name: "visitedlinkcolor",
+              widget: "color",
+            }
+          - { label: "Menu Link Color", name: "menulinkcolor", widget: "color" }
+          - {
+              label: "Menu Active Link Color",
+              name: "menuactivelinkcolor",
+              widget: "color",
+            }
+          - {
+              label: "Header Title Color",
+              name: "headertitlecolor",
+              widget: "color",
+            }
+          - {
+              label: "Header Background Color",
+              name: "headerbackgroundcolor",
+              widget: "color",
+            }
+          - {
+              label: "Sidebar Link Color",
+              name: "sidebarlinkcolor",
+              widget: "color",
+            }
+          - { label: "Subtitle Color", name: "subtitlecolor", widget: "color" }
+          - {
+              label: "Hero Content Arrangement Horizontal",
+              name: "hero-content-arrangement-horizontal",
+              widget: "select",
+              options: ["start", "center", "end"],
+            }
+          - {
+              label: "Hero Content Arrangement Vertical",
+              name: "hero-content-arrangement-vertical",
+              widget: "select",
+              options: ["start", "center", "end"],
+            }
+          - {
+              label: "Hero Content Text Size",
+              name: "hero-content-text-size",
+              widget: "string",
+            }
+          - {
+              label: "Hero Content Text Size 2",
+              name: "hero-content-text-size-2",
+              widget: "string",
+            }            
+      - label: "English Web Content"
+        name: "english"
+        file: "_data/english.yml"
+        fields:
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["English", "Español"],
+            }
+          - {
+              label: "Language Code",
+              name: "language-code",
+              widget: "select",
+              options: ["en", "es"],
+            }
+          - { label: "ITN Slogan", name: "network-slogan", widget: "string" }
+          - {
+              label: "Share Button Text",
+              name: "share-button",
+              widget: "string",
+            }
+          - { label: "Study Name", name: "study-name", widget: "string" }  
+          - {
+              label: "Study Description",
+              name: "study-short-description",
+              widget: "string",
+            }
+          - { label: "Study Status", name: "study-status", widget: "string" }
+          - {
+              label: "Main Menu Home",
+              name: "menu-name-home",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu About Disease",
+              name: "menu-name-about-disease",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu About Study",
+              name: "menu-name-about-study",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu Eligibility",
+              name: "menu-name-eligibility",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu Study Locations",
+              name: "menu-name-study-locations",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu About ITN",
+              name: "side-menu-name-about-ITN",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu Other ITN Studies",
+              name: "side-menu-name-other-ITN-studies",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu Rights Consent",
+              name: "side-menu-rights-consent",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu Understanding Clinical Trials",
+              name: "side-menu-understanding-clinical-trials",
+              widget: "string",
+            }
+          - { label: "Foot Note", name: "foot-note", widget: "markdown" }
+          - {
+              label: "Call To Action Text",
+              name: "home-page-call-to-action-text",
+              widget: "string",
+            }
+          - {
+              label: "ITN Logo Description",
+              name: "ITN-logo-description",
+              widget: "string",
+            }
+          - {
+              label: "NIH Logo Description",
+              name: "NIH-logo-description",
+              widget: "string",
+            }
+      - label: "Spanish Web Content"
+        name: "spanish"
+        file: "_data/spanish.yml"
+        fields:
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["English", "Español"],
+            }
+          - {
+              label: "Language Code",
+              name: "language-code",
+              widget: "select",
+              options: ["en", "es"],
+            }
+          - { label: "ITN Slogan", name: "network-slogan", widget: "string" }
+          - {
+              label: "Share Button Text",
+              name: "share-button",
+              widget: "string",
+            }
+          - { label: "Study Name", name: "study-name", widget: "string" }   
+          - {
+              label: "Study Description",
+              name: "study-short-description",
+              widget: "string",
+            }
+          - { label: "Study Status", name: "study-status", widget: "string" }
+          - {
+              label: "Main Menu Home",
+              name: "menu-name-home",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu About Disease",
+              name: "menu-name-about-disease",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu About Study",
+              name: "menu-name-about-study",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu Eligibility",
+              name: "menu-name-eligibility",
+              widget: "string",
+            }
+          - {
+              label: "Main Menu Study Locations",
+              name: "menu-name-study-locations",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu About ITN",
+              name: "side-menu-name-about-ITN",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu Other ITN Studies",
+              name: "side-menu-name-other-ITN-studies",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu Rights Consent",
+              name: "side-menu-rights-consent",
+              widget: "string",
+            }
+          - {
+              label: "Side Menu Understanding Clinical Trials",
+              name: "side-menu-understanding-clinical-trials",
+              widget: "string",
+            }
+          - { label: "Foot Note", name: "foot-note", widget: "markdown" }
+          - {
+              label: "Call To Action Text",
+              name: "home-page-call-to-action-text",
+              widget: "string",
+            }
+          - {
+              label: "ITN Logo Description",
+              name: "ITN-logo-description",
+              widget: "string",
+            }
+          - {
+              label: "NIH Logo Description",
+              name: "NIH-logo-description",
+              widget: "string",
+            }
+  - name: "study_locations"
+    label: "Study Locations"
+    folder: "_locations/"
+    slug: "{{year}}-{{month}}-{{day}}_{{location-name}}"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - { label: "Location Name", name: "location-name", widget: "string" }
+      - { label: "State", name: "address-state", widget: "string" }
+      - { label: "Address Line 1", name: "address-line-1", widget: "string" }
+      - {
+          label: "Address Line 2",
+          name: "address-line-2",
+          widget: "string",
+          required: false,
+        }
+      - { label: "City and State", name: "city-state", widget: "string" }
+      - { label: "Zip Code", name: "zip-code", widget: "string" }
+      - {
+          label: "Principal Investigator",
+          name: "principal-investigator",
+          widget: "string",
+        }
+      - {
+          label: "Contact Name",
+          name: "contact-name",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Contact Email",
+          name: "contact-email",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Contact Phone",
+          name: "contact-phone",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Google Maps Directions Link",
+          name: "directions",
+          widget: "string",
+        }
+      - {
+          label: "Location Latitude",
+          name: "latitude",
+          widget: "string",
+        }
+      - {
+          label: "Location Longitude",
+          name: "longitude",
+          widget: "string",
+        }
+      - {
+          label: "Site Status (English)",
+          name: "site-status",
+          widget: "select",
+          options: ["opening soon", "now recruiting", "closed"],
+        }
+      - {
+          label: "Site Status (Spanish)",
+          name: "es-site-status",
+          widget: "select",
+          options: ["inicia pronto", "ahora reclutando", "cerrado"],
+        }
+  - name: "qualification_questions"
+    label: "Qualification Questions"
+    folder: "_qualifications/"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - {
+          label: "Question (English)",
+          name: "question",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Question (Spanish)",
+          name: "es-question",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Question Number",
+          name: "question-number",
+          widget: "number",
+          required: true,
+        }
+      - {
+          label: "Question Type",
+          name: "question-type",
+          widget: "select",
+          options: ["checkbox", "radio"],
+          required: true,
+        }
+      - {
+          label: "Choices in English (separate each choice with '; ') <case sensitive>",
+          name: "choices",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Choices in Spanish (separate each choice with '; ') <case sensitive>",
+          name: "es-choices",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Desired Answer in English (if this question is essential to determine eligibility) <case sensitive>",
+          name: "desired-answer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Desired Answer in Spanish (if this question is essential to determine eligibility) <case sensitive>",
+          name: "es-desired-answer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Non Desired Answer in English (if this question is essential to determine eligibility) <case sensitive>",
+          name: "non-desired-answer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Non Desired Answer in Spanish (if this question is essential to determine eligibility) <case sensitive>",
+          name: "es-non-desired-answer",
+          widget: "string",
+          required: false,
+        }
+  - name: "contact_questions"
+    label: "Contact Questions"
+    folder: "_contacts/"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - {
+          label: "Field Name (English)",
+          name: "field-name",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Field Name (Spanish)",
+          name: "es-field-name",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Field Number",
+          name: "field-number",
+          widget: "number",
+          required: true,
+        }
+      - {
+          label: "Field Type",
+          name: "field-type",
+          widget: "select",
+          options: ["text", "selection", "email"],
+          required: true,
+        }
+      - {
+          label: "Required",
+          name: "required",
+          widget: "select",
+          options: ["Yes", "No"],
+          required: true,
+        }
+      - {
+          label: "Choices in English (if field type is selection, and please separate each choice with '; ')",
+          name: "choices",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Choices in Spanish (if field type is selection, and please separate each choice with '; ')",
+          name: "es-choices",
+          widget: "string",
+          required: false,
+        }
+  - name: "pages"
+    label: "Pages (English)"
+    editor:
+      preview: false
+    files:
+      - label: "Home"
+        name: "index"
+        file: "/en/index.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Hero Content", name: "hero-content", widget: "markdown" }
+          - { label: "Hero Content 2", name: "hero-content-2", widget: "markdown" }
+          - {
+              label: "Hero Image",
+              name: "hero-image",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+          - {
+              label: "Study Description",
+              name: "study-description",
+              widget: "string",
+            }
+          - {
+              label: "Study Eligibility",
+              name: "study-eligibility",
+              widget: "string",
+            }
+          - {
+              label: "Study Locations Content",
+              name: "study-locations",
+              widget: "string",
+            }
+      - label: "About Rheumatoid Arthritis"
+        name: "about-rheumatoid-arthritis"
+        file: "/en/about-rheumatoid-arthritis.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - {
+              label: "Call To Action Text",
+              name: "call-to-action-text",
+              widget: "string",
+            }
+          - {
+              label: "Photo",
+              name: "about-rheumatoid-arthritis-photo",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+      - label: "About ITN"
+        name: "about-itn"
+        file: "/en/about-itn.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "About CONTROL-RA"
+        name: "about-control-ra"
+        file: "/en/about-control-ra.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - {
+              label: "Photo",
+              name: "about-control-ra-image",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+      - label: "Am I Eligible?"
+        name: "am-i-eligible"
+        file: "/en/am-i-eligible.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - { 
+              label: "Image", 
+              name: "am-i-eligible-image", 
+              widget: "image",
+              media_folder: "/assets/img/", 
+            }
+      - label: "Other ITN Studies"
+        name: "other-itn-studies"
+        file: "/en/other-itn-studies.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Study Locations"
+        name: "study-locations"
+        file: "/en/study-locations.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - {
+              label: "Call To Action Text",
+              name: "call-to-action-text",
+              widget: "string",
+            }
+      - label: "Qualification Form"
+        name: "qualification-form"
+        file: "/en/qualification-form.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Submit Details"
+        name: "submit-details"
+        file: "/en/submit-details.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Thank You"
+        name: "thank-you"
+        file: "/en/thank-you.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "You Do Not Qualify"
+        name: "you-do-not-qualify"
+        file: "/en/you-do-not-qualify.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+  - name: "es-pages"
+    label: "Pages (Spanish)"
+    editor:
+      preview: false
+    files:
+      - label: "Home"
+        name: "index"
+        file: "/es/index.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Hero Content", name: "hero-content", widget: "markdown" }
+          - { label: "Hero Content 2", name: "hero-content-2", widget: "markdown" }
+          - {
+              label: "Hero Image",
+              name: "hero-image",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+          - {
+              label: "Study Description",
+              name: "study-description",
+              widget: "string",
+            }
+          - {
+              label: "Study Eligibility",
+              name: "study-eligibility",
+              widget: "string",
+            }
+          - {
+              label: "Study Locations Content",
+              name: "study-locations",
+              widget: "string",
+            }
+      - label: "About Rheumatoid Arthritis"
+        name: "about-rheumatoid-arthritis"
+        file: "/es/about-rheumatoid-arthritis.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - {
+              label: "Call To Action Text",
+              name: "call-to-action-text",
+              widget: "string",
+            }
+          - {
+              label: "Photo",
+              name: "about-rheumatoid-arthritis-photo",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+      - label: "About ITN"
+        name: "about-itn"
+        file: "/es/about-itn.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "About CONTROL-RA"
+        name: "about-control-ra"
+        file: "/es/about-control-ra.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - {
+              label: "Photo",
+              name: "about-control-ra-image",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+      - label: "Am I Eligible?"
+        name: "am-i-eligible"
+        file: "/es/am-i-eligible.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - { 
+              label: "Image", 
+              name: "am-i-eligible-image", 
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+      - label: "Other ITN Studies"
+        name: "other-itn-studies"
+        file: "/es/other-itn-studies.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Study Locations"
+        name: "study-locations"
+        file: "/es/study-locations.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+          - {
+              label: "Call To Action Text",
+              name: "call-to-action-text",
+              widget: "string",
+            }
+      - label: "Qualification Form"
+        name: "qualification-form"
+        file: "/es/qualification-form.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Submit Details"
+        name: "submit-details"
+        file: "/es/submit-details.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Thank You"
+        name: "thank-you"
+        file: "/es/thank-you.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "You Do Not Qualify"
+        name: "you-do-not-qualify"
+        file: "/es/you-do-not-qualify.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Page Description",
+              name: "page-description",
+              widget: "string",
+            }
+          - { label: "Body Content", name: "body-content", widget: "markdown" }

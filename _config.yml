@@ -1,0 +1,6 @@
+name: Control-Ra Jekyll
+collections:
+  - locations
+  - qualifications
+  - contacts
+incremental: true

@@ -1,0 +1,12 @@
+linkcolor: "#f99d31"
+visitedlinkcolor: "#97601f"
+menulinkcolor: "#9fa1a4"
+menuactivelinkcolor: "#7373a6"
+headertitlecolor: "#ffffff"
+headerbackgroundcolor: "#7373a6"
+sidebarlinkcolor: "#7373a6"
+subtitlecolor: "#7373a8"
+hero-content-arrangement-horizontal: start
+hero-content-arrangement-vertical: center
+hero-content-text-size: "28px"
+hero-content-text-size-2: "36px"

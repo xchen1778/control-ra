@@ -1,0 +1,241 @@
+/******************************************************************************
+ * itn-clinical-trial-responsive.layout.scss
+ *
+ * Additional, theme specific styles for the ITN Clinical Trial layout.
+ *****************************************************************************/
+/* ITN branding */
+/* System messages */
+.network-branding__slogan,
+.network-social,
+.l-region--header,
+.l-region--navigation,
+.l-region--sidebar-first {
+  display: none;
+}
+
+img, media {
+  max-width: 100%;
+}
+
+/**
+ * $BASE-TYPOGRAPHY
+ */
+html {
+  font-family: "Open Sans", sans-serif;
+  color: #4f4f4f;
+}
+
+/**
+ * $LINKS
+ */
+a {
+  text-decoration: none;
+}
+
+/**
+ * $HEADINGS
+ */
+h1, .alpha,
+h2, .beta,
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+h1 a,
+h1 a:visited, .alpha a,
+.alpha a:visited,
+h2 a,
+h2 a:visited, .beta a,
+.beta a:visited,
+h3 a,
+h3 a:visited, .gamma a,
+.gamma a:visited,
+h4 a,
+h4 a:visited, .delta a,
+.delta a:visited,
+h5 a,
+h5 a:visited, .epsilon a,
+.epsilon a:visited,
+h6 a,
+h6 a:visited, .zeta a,
+.zeta a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, .alpha {
+  font-size: 55px;
+  font-size: 3.4375rem;
+}
+
+h2, .beta {
+  font-size: 34px;
+  font-size: 2.125rem;
+}
+
+h3, .gamma {
+  font-size: 21px;
+  font-size: 1.3125rem;
+}
+
+h4, .delta {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+h6, .zeta {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+/**
+ * $PARAGRAPHS
+ */
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+p + img {
+  float: left;
+  margin-right: 1em;
+}
+
+html {
+  background-color: #b0b1b3;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.l-constrained {
+  padding: 0 10px;
+  margin: 0 auto;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+}
+.l-constrained:before, .l-constrained:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.l-constrained:after {
+  clear: both;
+}
+
+.l-main {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.l-network-branding {
+  width: 46.66667%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+}
+
+.l-network-header {
+  width: 46.66667%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+.team-member {
+  display: flex;
+}
+
+.team-member img {
+  margin-top: 0 !important;
+}
+
+@media (min-width: 44em) {
+  .l-constrained {
+    width: 960px;
+  }
+
+  .network-branding__slogan,
+  .network-social,
+  .l-region--header,
+  .l-region--navigation,
+  .l-region--sidebar-first {
+    display: block;
+  }
+
+  #mobile-menu-btn,
+  #block-menu-menu-mobile-menu {
+    display: none;
+  }
+
+  .l-network-branding {
+    width: 57.44681%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+
+  .l-network-header {
+    width: 40.42553%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+
+  .l-branding {
+    width: 31.91489%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  .maintenance-page .l-branding {
+	  float: none;
+	  width: none;
+	  margin: 0;
+  }
+
+  .l-region--header {
+    width: 65.95745%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+
+  .maintenance-page .l-page {
+	  padding: 20px;
+  }
+
+  .block-footer-text {
+      width: 57.44681%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0%;
+      clear: none;
+  }
+
+  .block-footer-images {
+      width: 40.42553%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none;
+  }
+}
