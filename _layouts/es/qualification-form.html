@@ -335,7 +335,7 @@
 
                 // form information
                 const formData = {};
-                formData['Study Name'] = "{{site.data.spanish.study-name | downcase}}";
+                formData['Study Name'] = "{{site.data.spanish.study-name | upcase}}";
                 groupQuestions.forEach(groupQuestion => {
                   formData[groupQuestion.title] = "";
                   const options = groupQuestion.querySelectorAll('input');
@@ -346,15 +346,27 @@
                     })
                 });
                 
-                const formDataJSON = JSON.stringify(formData);
+                console.log(JSON.stringify(formData));
+
+                fetch("https://api.itntrials.org/eligibility", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                  }
+                )
+                  .then(response => response.json())
+                  .then(result => console.log(result))
+                  .catch(error => console.error(error));
 
                 //Second: check whether the patient is qualified for the clinical study or not and then redirect
-                const desiredChoices = document.querySelectorAll(".desired-answer");
-                if([...desiredChoices].every(desiredChoice => desiredChoice.checked)) {
-                  location.href = "./submit-details";
-                } else {
-                  location.href= "./you-do-not-qualify";
-                }
+                // const desiredChoices = document.querySelectorAll(".desired-answer");
+                // if([...desiredChoices].every(desiredChoice => desiredChoice.checked)) {
+                //   location.href = "./submit-details";
+                // } else {
+                //   location.href= "./you-do-not-qualify";
+                // }
             }
         });
 
