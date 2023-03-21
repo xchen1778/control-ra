@@ -640,6 +640,34 @@ collections:
               widget: "string",
             }
           - { label: "Body Content", name: "body-content", widget: "markdown" }
+      - label: "Schedule of Events PDF"
+        name: "soe"
+        file: "/en/soe.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "SOE PDF File",
+              name: "soe-pdf",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
+      - label: "Eligibility PDF"
+        name: "eligibility"
+        file: "/en/eligibility.md"
+        fields:
+          - { label: "Page Title", name: "page-title", widget: "string" }
+          - { label: "Short Title", name: "short-title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - {
+              label: "Eligibility PDF File",
+              name: "eligibility-pdf",
+              widget: "image",
+              media_folder: "/assets/img/",
+            }
   - name: "es-pages"
     label: "Pages (Spanish)"
     editor:
