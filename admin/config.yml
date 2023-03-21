@@ -652,7 +652,7 @@ collections:
               label: "SOE PDF File",
               name: "soe-pdf",
               widget: "file",
-              default: "/assets/doc/control-ra-soe.pdf",
+              default: "/assets/img/control-ra-soe.pdf",
             }
       - label: "Eligibility PDF"
         name: "eligibility"
@@ -666,7 +666,7 @@ collections:
               label: "Eligibility PDF File",
               name: "eligibility-pdf",
               widget: "file",
-              default: "/assets/doc/control-ra-eligibility.pdf",
+              default: "/assets/img/control-ra-eligibility.pdf",
             }
   - name: "es-pages"
     label: "Pages (Spanish)"
